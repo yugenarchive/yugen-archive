@@ -21,7 +21,7 @@
             line-height: 1.8;
         }
 
-        /* NAVEGACIÓN CON LOGO CORREGIDO */
+        /* NAVEGACIÓN */
         nav {
             position: fixed;
             top: 0;
@@ -76,50 +76,38 @@
             text-transform: uppercase;
         }
 
-        /* CONTENEDOR DEL ARTÍCULO */
+        /* CONTENIDO */
         .article-container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 150px auto 100px;
             padding: 0 25px;
         }
 
         .article-header {
             text-align: center;
-            margin-bottom: 70px;
-        }
-
-        .article-number {
-            font-weight: 900;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            display: block;
-            margin-bottom: 15px;
+            margin-bottom: 60px;
         }
 
         .article-title {
-            font-size: clamp(3.5rem, 10vw, 7rem);
+            font-size: clamp(3rem, 10vw, 6rem);
             font-weight: 900;
             text-transform: uppercase;
-            line-height: 0.8;
-            letter-spacing: -4px;
+            line-height: 0.9;
+            letter-spacing: -3px;
         }
 
-        /* CUERPO DEL TEXTO */
         .article-body {
             font-family: 'Playfair Display', serif;
             font-size: 1.25rem;
             text-align: justify;
-            color: #1a1a1a;
         }
 
         .article-body p {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
-        /* IMÁGENES */
         .article-img-wrapper {
-            margin: 45px 0;
+            margin: 40px 0;
             text-align: center;
         }
 
@@ -127,44 +115,23 @@
             max-width: 100%;
             height: auto;
             border: 1px solid var(--black);
-            display: block;
-            margin: 0 auto;
         }
-
-        .img-caption {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 12px;
-            display: block;
-            opacity: 0.6;
-        }
-
-        .highlight { font-weight: 700; color: var(--black); }
-        .foreign { font-style: italic; }
 
         footer {
-            padding: 80px 40px;
+            padding: 60px;
             background: var(--pink);
             text-align: center;
             border-top: 1px solid var(--black);
-            margin-top: 100px;
         }
 
         .back-btn {
-            display: inline-block;
-            margin-bottom: 30px;
             text-decoration: none;
             color: var(--black);
             font-weight: 900;
             text-transform: uppercase;
             border: 2px solid var(--black);
-            padding: 12px 25px;
-            transition: 0.3s;
+            padding: 10px 20px;
         }
-
-        .back-btn:hover { background: var(--black); color: var(--pink); }
     </style>
 </head>
 <body>
@@ -181,53 +148,47 @@
 
     <article class="article-container">
         <header class="article-header">
-            <span class="article-number">Maison / 01</span>
             <h1 class="article-title">Chanel</h1>
         </header>
 
         <div class="article-body">
-            <p>Cuando piensas en una marca de lujo que inspire elegancia, ¿en cuál piensas? Seguramente en <span class="highlight">Chanel</span>. Todo el mundo conoce la <span class="foreign">Maison</span>, incluso aquellos a los que no les interesa este mundo; para mí Chanel es lujo atemporal y esta es su historia. La <span class="foreign">maison</span> se fundó en <span class="highlight">1910</span> en el 21 de la <span class="foreign">rue Cambon</span>, en París, y su fundadora, conocida por todos, fue <span class="highlight">Coco Chanel</span> (Gabrielle Chanel).</p>
+            <p>Cuando piensas en una marca de lujo que inspire elegancia, ¿en cuál piensas? Y por qué en Chanel. Todo el mundo conoce la Maison, incluso aquellos a los que no les interesa este mundo; para mí Chanel es lujo atemporal y esta es su historia. La maison se fundó en 1910 en el 21 de la rue Cambon, en París y su fundadora, conocida por todos, fue Coco Chanel o también conocida como Gabrielle Chanel.</p>
 
-            <p><span class="highlight">Gabrielle</span> hizo que se acabasen los corsés y empezó la era <span class="foreign">comfy</span> para las mujeres. Para ella, la moda no estaba hecha para señoras aburridas sin nada que hacer, sino para mujeres activas. Ella llevaba pantalones, considerados masculinos en la época, y pregonaba la idea del <span class="foreign">“silent luxury”</span> que muchas hoy llevan por bandera.</p>
+            <p>Gabrielle (Coco) hizo que se acabasen los corsés y empezó la era comfy para las mujeres. Porque para ella la moda no estaba hecha para mujeres activas y que hacían deporte sino para señoras aburridas sin nada que hacer, algo que no iba para nada con ella. Ella llevaba pantalones, que eran considerados del sexo masculino en la época, y pregonaba la idea del “silent luxury” que muchas hoy llevan por bandera.</p>
 
-            <p>Usaba colores como el gris o el azul oscuro e influencias de la hípica. Fue la pionera en utilizar las <span class="highlight">rayas horizontales</span> y los jerséis de cuello alto. En <span class="highlight">1917</span>, la camiseta marinera fue su prenda más popular. Ante la escasez de telas por la guerra, usó el patrón de los marineros franceses: <span class="highlight">21 rayas</span>, una por cada batalla ganada de Napoleón.</p>
-
-            <p>La mayoría tenemos un vestido negro básico, ese <span class="foreign">must</span> al que siempre recurrimos. Esto también fue influencia de Chanel. En <span class="highlight">1926</span>, <span class="foreign">Vogue USA</span> presentó su vestido de <span class="foreign">crepé de China</span> como el <span class="highlight">“Ford de Chanel”</span>, por ser accesible e imprescindible. Básicamente, inventó el uniforme de las <span class="foreign">fashion girlies</span>.</p>
+            <p>Usaba colores tradicionales como el gris o el azul oscuro para expandir aquello que la mujer pudiese usar y se inspiraba en deportes de exterior como en la hípica. Ella fue la pionera en utilizar las rayas horizontales en ropa y los jerséis de cuello alto. De hecho en la colección de 1917 la camiseta marinera fue la prenda más popular. Ante la escasez de telas debido a la guerra usó esta tela con exactamente 21 rayas de color azul marino sobre un fondo blanco; el mismo patrón del uniforme de los marineros franceses. Una franja por cada batalla ganada de Napoleón.</p>
 
             <div class="article-img-wrapper">
-                <img src="image_4.png" alt="Little Black Dress" class="article-image">
-                <span class="img-caption">The Little Black Dress (1926)</span>
+                <img src="image_4.png" alt="Vestido Chanel" class="article-image">
             </div>
 
-            <p>Como decía <span class="highlight">Miranda Priestly</span>, tu vestido no es solo negro; es <span class="foreign">“le petite robe noire”</span>. Las chicas <span class="foreign">dark</span> debemos agradecerle a Coco por usar este color para algo que no fuese el luto. En <span class="highlight">1939</span>, con la Guerra Mundial, la <span class="foreign">maison</span> cerró y se centró en su perfume: el <span class="highlight">Nº5 de Chanel</span>.</p>
+            <p>Si os paráis un segundo a pensar, la mayoría de las mujeres tenemos un vestido negro básico en nuestro armario, ese must al que siempre recurrimos. Esto también fue influencia de Chanel. Las mujeres de la época debían cambiarse el outfit porque no existía nada que sirviese tanto para el día como para la noche. Entonces salió en Vogue USA un vestido negro hecho con crepé de China en 1926 que se convertiría según las palabras de la revista Vogue en el “Ford de Chanel”. El Ford T ese modelo de coche que era accesible, asequible y un imprescindible que ayudó tanto a la marca. Básicamente, Chanel inventó el uniforme de las 'fashion girlies' antes de que existiera el concepto. Es ese momento Miranda Priestly explicando que tu jersey no es solo azul, es cerúleo; pues tu vestido negro no es solo un vestido, es lo que se denominó como “the little black dress” o tradicionalmente “le petite robe noire”. Y con este vestido las chicas “dark” como yo, que nos encanta vestir de negro, debemos de agradecerle a Coco por usar este color para una prenda casual; porque ella fue la primera en utilizarlo para algo que no fuese el luto.</p>
 
-            <p>Surgió de su encuentro con <span class="highlight">Ernest Beaux</span>. Gabrielle buscaba el aroma de su flor favorita, la <span class="highlight">camelia</span>. Aunque no tiene olor, para ella significaba belleza pura y sensualidad. De todas las muestras, eligió la <span class="highlight">número 5</span>. Durante la guerra, se hospedó en el <span class="foreign">Ritz</span>, explicando que “no es momento de vestir a mujeres cuyos maridos se enfrentan a la muerte”.</p>
+            <p>Segunda Guerra Mundial, Chanel cierra sus puertas en 1939. Durante la ocupación alemana en París la maison se centró solo en el perfume, ¿pero qué perfume? os preguntaréis. El número 5 de Chanel. Este perfume surgió a partir de un encuentro de Coco con Ernest Beaux el cual se convertiría en su socio. Cuando visitó el laboratorio Gabrielle buscaba un aroma relacionado con su flor favorita: la camelia. Pero la camelia no tiene olor, ¿cómo la vas a relacionar? Para ella esta flor significaba belleza pura, elegancia y sensualidad y es justo eso lo que buscaba en el perfume. Y de todas las muestras que Ernest le enseñó se quedó con la número 5, de ahí el nombre. Coco se hospedó en el Ritz durante la guerra, donde se sentía acompañada y segura. Y también donde explicaría el porqué del cierre de la maison: “no es momento de hacer trajes ni de vestir a mujeres cuyos maridos se enfrentan a la muerte”.</p>
+            
+            <div class="article-img-wrapper">
+                <img src="image_3.png" alt="Detalle Chanel" class="article-image">
+            </div>
 
-            <p>En el <span class="highlight">54</span> volvió con el traje <span class="foreign">tweed</span>, adorado por Marilyn Monroe y Jackie Kennedy. Sí, ella fue la culpable de que <span class="highlight">Zara</span> lo reversione mil veces y de que sigas buscándolo en <span class="foreign">Vinted</span> a día de hoy.</p>
+            <p>En el 54 volvió a la moda, pero recibió muchas críticas por su nueva colección en el entorno francés, aunque su éxito en el extranjero sobre todo en los Estados Unidos y Reino Unido fue muy grande. En esta época nació el traje tweed que portaron celebridades como Marilyn Monroe y Jackie Kennedy. Sí, ella fue la culpable de que Zara reversionara este traje de mil maneras diferentes y de que sigas buscando algo parecido en Vinted a día de hoy.</p>
 
-            <p>En <span class="highlight">1955</span>, cansada de perder los bolsos de mano, les puso una <span class="highlight">cadena</span>. Así nació el <span class="highlight">2.55</span>. En el <span class="highlight">57</span> llegaron los zapatos <span class="foreign">ballet flat</span> bicolor.</p>
+            <p>En 1955 solo se llevaban los bolsos de mano los cuales Gabrielle encontraba incómodos y muy poco prácticos; “estoy cansada de llevar los bolsos en la mano y perderlos”, eso fue lo que dijo Chanel. ¿Entonces qué hizo? Le puso una cadena, algo tan simple como eso para arreglar el problema que tantas mujeres tenían. Para completar el total look de Chanel le faltaban unos zapatos y aquí surgió el típico ballet flat bicolor de Chanel en el 57.</p>
+
+            <p>Una de las mayores leyendas de la moda nos dejó en 1971, ese año Gabrielle Chanel murió. Lo que llevó a un pequeño periodo de incertidumbre durante un largo periodo en el que se apoyaron de los clásicos de la marca. Llega 1983 y con esta fecha el resurgir de la marca. Karl Lagerfeld entra en Chanel como director creativo. Después de muchos intentos, la maison dejaba de funcionar y cuando le propusieron el puesto los dueños le dieron a Lagerfeld carta blanca. Aquí Chanel comenzó a ser un fenómeno mundial, utilizó la esencia de la marca de una manera más moderna. Según él, antes de que entrara la firma era el “viejo sombrero”, fun fact: la firma comenzó con sombreros antes de pasar a la ropa.</p>
 
             <div class="article-img-wrapper">
-                <img src="image_3.png" alt="Bolso Chanel 2.55" class="article-image">
-                <span class="img-caption">El bolso 2.55: Funcionalidad y Estilo</span>
+                <img src="image_5.png" alt="Desfile Chanel" class="article-image">
             </div>
 
-            <p>Gabrielle murió en <span class="highlight">1971</span>, dejando un vacío hasta <span class="highlight">1983</span>, cuando <span class="highlight">Karl Lagerfeld</span> entró con carta blanca. Él convirtió la firma en un fenómeno mundial, modernizando los <span class="foreign">bestsellers</span> y creando el icónico <span class="highlight">chain dress</span> de <span class="highlight">1992</span> e introduciendo el <span class="foreign">denim</span>.</p>
+            <p>Lagerfeld cogió la esencia de Chanel y todos sus bestsellers y los modernizó de manera que siguiesen siendo trendy y ponibles. Como cuando modernizó el “petite robe noire” y lo convirtió en el icónico chain dress de la colección primavera verano de 1992. También introdujo el denim a la firma, lo que ayudó a revolucionar el prêt-à-porter de Chanel. Si hay algo que destacó en la época de Lagerfeld fueron los desfiles. Esos extravagantes escenarios como con el icónico desfile del iceberg para la línea otoño/invierno 2010/11. O la línea de “cruise” en la estación central de Nueva York. Estuvo en la maison hasta 2019 cuando murió.</p>
 
-            <p>Sus desfiles fueron legendarios, como el del <span class="highlight">iceberg (2010/11)</span> o el de la estación central de Nueva York. Karl estuvo hasta su muerte en <span class="highlight">2019</span>, sucedido por <span class="highlight">Virginie Viard</span>, su “brazo derecho”, quien priorizó los actos sobre las palabras.</p>
-
-            <div class="article-img-wrapper">
-                <img src="image_5.png" alt="Desfile Chanel Iceberg" class="article-image">
-                <span class="img-caption">Chanel Fall/Winter 2010/11</span>
-            </div>
-
-            <p>Finalmente, <span class="highlight">Matthieu Blazy</span> tomó el relevo, aportando su detalle por las telas y su visión minimalista. Al igual que Coco, Blazy opta por la <span class="highlight">simplicidad y la funcionalidad</span> que definen el lujo real.</p>
+            <p>Su sucesora fue Virginie Viard, fue la colaboradora de Lagerfeld para la que ella era “su brazo izquierdo y derecho”. Aunque ella era menos extrovertida, no tenía tanta presencia mediática. Para ella eran más importantes los actos antes que las palabras (como todas las girls le dicen a sus novios vaya). Matthieu Blazy comenzó después de Virginie Viard en 2019. Anteriormente fue director creativo de Bottega y conocido por ser muy detallista con cualquier prenda, darle mucha importancia a las telas. Al igual que Coco, Blazy opta por la simplicidad y la funcionalidad.</p>
         </div>
     </article>
 
     <footer>
         <a href="index.html" class="back-btn">Volver al archivo</a>
-        <div class="footer-credits">© 2026 YŪGEN ARCHIVE</div>
+        <p style="margin-top: 20px; font-weight: 900;">© 2026 YŪGEN ARCHIVE</p>
     </footer>
 
 </body>
