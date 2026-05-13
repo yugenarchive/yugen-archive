@@ -21,7 +21,6 @@
             line-height: 1.8;
         }
 
-        /* NAVEGACIÓN */
         nav {
             position: fixed;
             top: 0;
@@ -54,70 +53,33 @@
             flex-shrink: 0;
         }
 
-        .logo-macron {
-            width: 12px;
-            height: 1.5px;
-            background-color: var(--pink);
-            margin-bottom: -1px;
-        }
+        .logo-macron { width: 12px; height: 1.5px; background-color: var(--pink); margin-bottom: -1px; }
+        .logo-y { color: var(--pink); font-weight: 300; font-size: 2rem; line-height: 1; transform: scaleY(1.1); }
+        .nav-logo-text { font-weight: 900; font-size: 1.3rem; letter-spacing: -1px; text-transform: uppercase; }
 
-        .logo-y {
-            color: var(--pink);
-            font-weight: 300;
-            font-size: 2rem;
-            line-height: 1;
-            transform: scaleY(1.1);
-        }
-
-        .nav-logo-text {
-            font-weight: 900;
-            font-size: 1.3rem;
-            letter-spacing: -1px;
-            text-transform: uppercase;
-        }
-
-        /* CONTENIDO */
         .article-container {
             max-width: 800px;
             margin: 150px auto 100px;
             padding: 0 25px;
         }
 
-        .article-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+        .article-header { text-align: center; margin-bottom: 60px; }
+        .article-title { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 900; text-transform: uppercase; line-height: 0.9; letter-spacing: -3px; }
 
-        .article-title {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 900;
-            text-transform: uppercase;
-            line-height: 0.9;
-            letter-spacing: -3px;
-        }
+        .article-body { font-family: 'Playfair Display', serif; font-size: 1.25rem; text-align: justify; }
+        .article-body p { margin-bottom: 25px; }
 
-        .article-body {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-            text-align: justify;
-        }
-
-        .article-body p {
-            margin-bottom: 25px;
-        }
-
-        /* AJUSTE DE IMÁGENES MÁS PEQUEÑAS */
+        /* IMÁGENES MÁS PEQUEÑAS */
         .article-img-wrapper {
-            margin: 50px auto;
+            margin: 40px auto;
             text-align: center;
-            max-width: 550px; /* Aquí limitamos el ancho para que no sean gigantes */
+            max-width: 500px; /* Tamaño reducido */
         }
 
         .article-image {
             width: 100%;
             height: auto;
             border: 1px solid var(--black);
-            border-radius: 4px; /* Un toque de suavizado */
             display: block;
         }
 
@@ -131,22 +93,8 @@
             opacity: 0.6;
         }
 
-        footer {
-            padding: 60px;
-            background: var(--pink);
-            text-align: center;
-            border-top: 1px solid var(--black);
-        }
-
-        .back-btn {
-            text-decoration: none;
-            color: var(--black);
-            font-weight: 900;
-            text-transform: uppercase;
-            border: 2px solid var(--black);
-            padding: 10px 20px;
-            display: inline-block;
-        }
+        footer { padding: 60px; background: var(--pink); text-align: center; border-top: 1px solid var(--black); }
+        .back-btn { text-decoration: none; color: var(--black); font-weight: 900; text-transform: uppercase; border: 2px solid var(--black); padding: 10px 20px; display: inline-block; }
     </style>
 </head>
 <body>
@@ -169,36 +117,38 @@
         <div class="article-body">
             <p>Si pienso en Margiela pienso en misterio, en cara tapada, en las cuatro puntadas. Martin Margiela nunca fue una persona que quisiese protagonismo y ese afán por el anonimato, combinado con las obras de arte que creaba, tuvieron el efecto contrario. En sus propias palabras dice: “siempre quise que mi nombre estuviese unido a mi producto, no a mi cara”.</p>
 
+            <p>Después de la etapa de los ochenta, con esas figuras extravagantes y de reloj de oro, la primera línea fue de primavera-verano, inspirado en el surrealismo, en esa cara tapada por un velo tan distintiva de la marca. Cuando lo probó en una modelo le encantó porque sus ojos solo se fijaban en la ropa que llevaban. Para Martin, los hombros y los zapatos eran la clave del outfit; lo demás es relleno. Los zapatos te otorgan movimiento y los hombros te dan actitud, de ahí salen dos de las claves de Margiela. Los zapatos Tabi, esos que ves a todas las influencers a día de hoy y que los amas o los odias; aunque probablemente si Carrie Bradshaw los hubiese llevado antes, estoy segura que hubiesen dado el boom hace tiempo.</p>
+
             <div class="article-img-wrapper">
-                <img src="image.png" alt="Zapatos Tabi Margiela" class="article-image">
-                <span class="img-caption">The Iconic Tabi Collection</span>
+                <img src="image.png" alt="Zapatos Tabi" class="article-image">
+                <span class="img-caption">Foto Tabi</span>
             </div>
 
-            <p>Para Martin, los hombros y los zapatos eran la clave del outfit; lo demás es relleno. Los zapatos te otorgan movimiento y los hombros te dan actitud, de ahí salen dos de las claves de Margiela. Los zapatos Tabi, esos que ves a todas las influencers a día de hoy y que los amas o los odias; aunque probablemente si Carrie Bradshaw los hubiese llevado antes, estoy segura que hubiesen dado el boom hace tiempo.</p>
+            <p>Originalmente fueron creados para coleccionistas, pero a día de hoy se han hecho tan virales que todo el mundo los tiene, por eso Margiela ha creado recientemente una línea de zapatos Tabi en la cual lanzarán un modelo al año y muy limitado.</p>
 
-            <p>La Maison fue fundada en agosto de 1987 por Martin Margiela y Jenny Meirens. Margiela quería crear un universo y ese universo se desarrollaría alrededor del color blanco. Después de tanto negro y gris, en Margiela todo estaba pintado de blanco o cubierto por algodón blanco.</p>
+            <p>La Maison fue fundada en agosto de 1987 por Martin Margiela y Jenny Meirens. Margiela quería crear un universo y ese universo se desarrollaría alrededor del color blanco. Después de tanto negro y gris, en Margiela todo estaba pintado de blanco o cubierto por algodón blanco. Margiela estaba cansado de que la gente entrase a una tienda y dijese “anda mira, este abrigo es Dior” o “ese bolso es Chanel”. Él no quería nada de eso para su marca y ahí nació la icónica etiqueta blanca con cuatro puntadas. Durante muchos años la gente se acercaba a las personas que llevaban la ropa de Martin para avisarles de que tenían algo en la espalda y para ellos era en plan “no, es parte de la marca, es Martin Margiela”.</p>
 
             <div class="article-img-wrapper">
                 <img src="image (2).png" alt="Etiqueta Margiela" class="article-image">
-                <span class="img-caption">Las cuatro puntadas blancas</span>
+                <span class="img-caption">Las cuatro puntadas</span>
             </div>
 
-            <p>Margiela estaba cansado de que la gente entrase a una tienda y dijese “anda mira, este abrigo es Dior” o “ese bolso es Chanel”. Él no quería nada de eso para su marca y ahí nació la icónica etiqueta blanca con cuatro puntadas.</p>
-
-            <p>Su primer desfile fue en el teatro Café de la Gare; cuando le preguntaron al dueño si podían usar el espacio, él le contestó: “si lo hacéis aquí, seréis famosos”. El desfile se celebró en 1988 para la colección primavera-verano del 89. Antes de salir en el desfile, las modelos debían de pisar pintura roja para dejar huella en la pasarela.</p>
+            <p>Su primer desfile fue en el teatro Café de la Gare; cuando le preguntaron al dueño si podían usar el espacio, él le contestó: “si lo hacéis aquí, seréis famosos”. El desfile se celebró en 1988 para la colección primavera-verano del 89. Antes de salir en el desfile, las modelos debían de pisar pintura roja para dejar huella en la pasarela. Pero Margiela se llevó su show de la colección primavera-verano del 90 a un barrio marginal de París donde te podías encontrar a las personas más importantes en el front row o a gente del barrio. Era como si Andy Warhol hubiese diseñado una pasarela en medio de un descampado; todo lo que hacía era diferente y con su esencia. El show fue un caos total en el mejor sentido: gritos, niños en la pasarela… Martin lo clasifica como “el show más mágico de su carrera”.</p>
 
             <div class="article-img-wrapper">
-                <img src="image (1).png" alt="Desfile Margiela 1990" class="article-image">
-                <span class="img-caption">Desfile Primavera-Verano 1990</span>
+                <img src="image (1).png" alt="Desfile Margiela" class="article-image">
+                <span class="img-caption">Show Primavera-Verano 1990</span>
             </div>
 
-            <p>Pero Margiela se llevó su show de la colección primavera-verano del 90 a un barrio marginal de París donde te podías encontrar a las personas más importantes en el front row o a gente del barrio. Era como si Andy Warhol hubiese diseñado una pasarela en medio de un descampado.</p>
+            <p>Me resulta fascinante cómo cogía objetos y los convertía en moda, como una camiseta de una bolsa de plástico o un plato roto que se convirtió en un top, calcetines militares que evolucionaron en un jersey… Reutilizar telas olvidadas, dañadas. Martin amaba lo que él hacía; simplemente le parecía extraño. Después de tantas copias por parte de las grandes superficies, decidió volver a presentar sus “best sellers” todos en un color.</p>
 
-            <p>Martin aguantó un poco, pero acabó dejando su Maison en las manos de John Galliano. Muchos de los looks de Galliano han quedado grabados en nuestras mentes, ¿pero el look de Rihanna con Margiela en la Met Gala de 2018?</p>
+            <p>En el 2002, Renzo Rosso, el dueño de Diesel, compró la firma y Jenny se desvinculó de inmediato. La estructura de la firma cambió mucho; ya no la caracterizaba la pasión por la moda sino el dinero que ganase el señor Rosso, incluso introdujeron conceptos tan desconocidos para Martin como un equipo de marketing, algo que la marca no había tenido nunca. Martin aguantó un poco, pero acabó dejando su Maison en las manos de John Galliano.</p>
+
+            <p>Después de la polémica con Dior, Galliano entra en Margiela en 2014. Esta entrada fue muy polémica porque, al menos desde mi punto de vista, Galliano es la antítesis de Martin. Empezó con la colección Artisanal primavera-verano 2015; según él respetó la esencia de Martin pero dándole un toque teatral con abrigos que pasan a ser vestidos o el uso de materiales reciclados. Durante su época en Margiela los Tabis también fueron protagonistas pero de una manera más especial: transparentes, con purpurina… Muchos de los looks de Galliano han quedado grabados en nuestras mentes, ¿pero el look de Rihanna con Margiela en la Met Gala de 2018?</p>
 
             <div class="article-img-wrapper">
-                <img src="image (3).png" alt="Rihanna MET Gala Margiela" class="article-image">
-                <span class="img-caption">Rihanna en la MET Gala 2018</span>
+                <img src="image (3).png" alt="Rihanna Met Gala" class="article-image">
+                <span class="img-caption">Look MET Gala 2018</span>
             </div>
 
             <p>Después de Galliano entró Ackermann en 2024 con un estilo refinado y estructural, nada que ver con su antecesor; y después en 2025 entró Glenn Martens, que es el actual director creativo y tiene un estilo experimental, deconstructivista….</p>
@@ -212,4 +162,5 @@
 
 </body>
 </html>
+
 
