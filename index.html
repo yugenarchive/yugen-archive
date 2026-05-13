@@ -28,7 +28,7 @@
             scroll-behavior: smooth;
         }
 
-        /* NAVEGACIÓN */
+        /* NAVEGACIÓN ACTUALIZADA */
         nav {
             position: fixed;
             top: 0;
@@ -54,13 +54,37 @@
         .logo-name { font-weight: 900; font-size: 1.4rem; letter-spacing: -1px; line-height: 0.9; }
         .logo-archive { font-weight: 400; font-size: 0.6rem; letter-spacing: 4px; text-transform: uppercase; margin-top: 2px; }
 
+        /* GRUPO DE BOTONES (NEWSLETTER + MENÚ) */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .newsletter-link-nav {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 900;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1.5px solid var(--black);
+            padding: 8px 16px;
+            transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .newsletter-link-nav:hover {
+            background-color: var(--black);
+            color: var(--pink);
+        }
+
         .menu-btn {
             background: none; border: none; cursor: pointer;
             display: flex; flex-direction: column; gap: 6px; z-index: 1100;
         }
         .menu-btn span { display: block; width: 25px; height: 2px; background-color: var(--black); transition: 0.3s; }
 
-        /* PANEL LATERAL INTERACTIVO */
+        /* PANEL LATERAL */
         .side-menu {
             position: fixed; top: 0; right: -100%; 
             width: 400px; max-width: 85%; height: 100vh;
@@ -79,7 +103,6 @@
             letter-spacing: -1px; cursor: pointer; display: block;
         }
 
-        /* ACORDEÓN MAISONS */
         .maisons-content {
             max-height: 0;
             overflow: hidden;
@@ -101,7 +124,7 @@
         }
         .overlay.active { display: block; }
 
-        /* HERO - ESPACIADO EDITORIAL */
+        /* HERO */
         header { 
             height: 90vh; 
             display: flex; 
@@ -113,7 +136,7 @@
         .hero-title { font-size: clamp(4rem, 18vw, 15rem); font-weight: 900; text-transform: uppercase; line-height: 0.8; letter-spacing: -5px; }
         .subtitle { margin-top: 30px; font-size: 1.1rem; text-transform: uppercase; max-width: 450px; }
 
-        /* GRID DE ARTÍCULOS (NEGRO Y ROSA) */
+        /* GRID */
         .article-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -145,7 +168,7 @@
         .article-card h3 { font-size: 2.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: -2px; }
         .article-card span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
 
-        /* SECCIÓN ABOUT - DEBAJO DE LOS CUADRADOS */
+        /* ABOUT */
         .section-about { 
             padding: 100px 40px; 
             background-color: var(--white);
@@ -170,17 +193,23 @@
                 <span class="logo-archive">ARCHIVE</span>
             </div>
         </a>
-        <button class="menu-btn" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+
+        <div class="nav-actions">
+            <a href="https://forms.gle/bSgLQ53pMzDBMaMi8" target="_blank" class="newsletter-link-nav">
+                Newsletter
+            </a>
+            <button class="menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
     <div class="side-menu" id="sideMenu">
-        <span class="small-text">Explorar</span>
+        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: block; opacity: 0.6;">Explorar</span>
         <a class="menu-link">Leyendas de la moda</a>
         
         <div class="menu-link" onclick="toggleMaisons()">Maisons ▾</div>
@@ -257,3 +286,4 @@
     </script>
 </body>
 </html>
+
