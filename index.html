@@ -10,41 +10,46 @@
     <meta name="keywords" content="moda de archivo, Chanel, Balenciaga, Maison Margiela, alta costura, fashion critique, Yugen Archive">
     <meta name="author" content="Yugen Archive">
 
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --black: #0a0a0a;
-            --white: #f5f5f3;
-            --gray: #888888;
-            --paper: #ece7de;
-            --ink: #111111;
+            --bg-noise: #0d0e11;
+            --white: #f8f8fa;
+            --silver: #cfd2d6;
+            --gray: #7a7d85;
+            --tape-bg: #eceae4;
+            --tape-border: #b8b5ad;
+            --ink: #0a0a0c;
+            --acid-accent: #e6ff00; /* Detalle sticker sutil Y2K */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--black);
+            background-color: var(--bg-noise);
             color: var(--white);
             line-height: 1.2;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+            background-size: 24px 24px;
         }
 
-        /* NAVEGACIÓN MONOCROMÁTICA */
+        /* NAVEGACIÓN MONOCROMÁTICA ELEVADA */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 16px 40px; 
+            padding: 18px 45px; 
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(10, 10, 10, 0.75);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(13, 14, 17, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .logo-container { 
@@ -55,41 +60,42 @@
             color: var(--white); 
         }
         .logo-circle {
-            width: 38px; 
-            height: 38px; 
-            background-color: var(--white); 
+            width: 36px; 
+            height: 36px; 
+            background: linear-gradient(135deg, #ffffff 0%, #b0b3b8 100%);
             border-radius: 50%;
             display: flex; 
             flex-direction: column; 
             align-items: center; 
             justify-content: center;
             flex-shrink: 0;
+            box-shadow: 0 0 15px rgba(255,255,255,0.2);
         }
-        .logo-macron { width: 10px; height: 1.5px; background-color: var(--black); margin-bottom: -1px; }
-        .logo-y { color: var(--black); font-weight: 400; font-size: 1.8rem; line-height: 1; transform: scaleY(1.05); }
+        .logo-macron { width: 10px; height: 1.5px; background-color: var(--ink); margin-bottom: -1px; }
+        .logo-y { color: var(--ink); font-weight: 700; font-size: 1.6rem; line-height: 1; }
         
         .logo-text { display: flex; flex-direction: column; }
         .logo-name { font-weight: 900; font-size: 1.15rem; letter-spacing: -0.5px; line-height: 0.95; }
-        .logo-archive { font-weight: 400; font-size: 0.55rem; letter-spacing: 3px; text-transform: uppercase; margin-top: 3px; opacity: 0.7; }
+        .logo-archive { font-family: 'Courier Prime', monospace; font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; margin-top: 3px; color: var(--silver); }
 
         .nav-actions {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 28px;
         }
 
         .newsletter-link-nav {
             text-decoration: none;
             color: var(--white);
             font-weight: 700;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding: 6px 0;
-            transition: opacity 0.3s;
+            transition: color 0.3s;
+            position: relative;
         }
 
-        .newsletter-link-nav:hover { opacity: 0.5; }
+        .newsletter-link-nav:hover { color: var(--silver); }
 
         .menu-btn {
             background: none; border: none; cursor: pointer;
@@ -101,11 +107,12 @@
         .side-menu {
             position: fixed; top: 0; right: -100%; 
             width: 380px; max-width: 85%; height: 100vh;
-            background-color: #0d0d0d; z-index: 1050;
-            transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+            background: rgba(10, 11, 14, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1050;
+            transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex; flex-direction: column; 
             padding: 90px 40px 40px 40px; 
-            box-shadow: -20px 0 50px rgba(0,0,0,0.8);
             border-left: 1px solid rgba(255, 255, 255, 0.1);
             overflow-y: auto;
         }
@@ -125,9 +132,9 @@
             color: var(--white); text-decoration: none; font-size: 1.3rem;
             font-weight: 900; text-transform: uppercase; margin-bottom: 18px;
             letter-spacing: -0.5px; cursor: pointer; display: block;
-            transition: opacity 0.2s;
+            transition: transform 0.2s, color 0.2s;
         }
-        .menu-link:hover { opacity: 0.6; }
+        .menu-link:hover { transform: translateX(5px); color: var(--silver); }
 
         .maisons-content {
             max-height: 0;
@@ -135,8 +142,8 @@
             transition: max-height 0.4s ease-out;
             display: flex;
             flex-direction: column;
-            padding-left: 12px;
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding-left: 14px;
+            border-left: 1px dashed rgba(255, 255, 255, 0.2);
             margin-left: 4px;
         }
         .maisons-content.show { max-height: 200px; margin-bottom: 20px; }
@@ -149,11 +156,11 @@
 
         .overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.6); display: none; z-index: 1040; backdrop-filter: blur(4px);
+            background: rgba(0,0,0,0.7); display: none; z-index: 1040; backdrop-filter: blur(5px);
         }
         .overlay.active { display: block; }
 
-        /* HERO VIDEO CON LA 'Y' CENTRAL */
+        /* HERO VIDEO LOOP + 'Y' CENTRAL */
         .hero-video-section {
             position: relative;
             width: 100%;
@@ -174,7 +181,7 @@
             height: auto;
             transform: translate(-50%, -50%);
             object-fit: cover;
-            filter: contrast(1.15) brightness(0.7);
+            filter: contrast(1.18) brightness(0.72) saturate(0.9);
             z-index: 1;
         }
 
@@ -184,7 +191,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+            background: radial-gradient(circle, rgba(13,14,17,0.1) 0%, rgba(13,14,17,0.75) 100%);
             z-index: 2;
         }
 
@@ -199,74 +206,101 @@
         }
 
         .hero-center-macron {
-            width: clamp(24px, 4vw, 45px);
+            width: clamp(28px, 4vw, 55px);
             height: clamp(3px, 0.5vw, 6px);
-            background-color: var(--white);
+            background: linear-gradient(90deg, #fff, #999);
             margin-bottom: clamp(-6px, -1vw, -12px);
         }
 
         .hero-center-letter {
             font-family: 'Inter', sans-serif;
             font-weight: 300;
-            font-size: clamp(8rem, 24vw, 22rem);
-            color: var(--white);
+            font-size: clamp(9rem, 25vw, 24rem);
+            color: #ffffff;
             line-height: 0.9;
-            letter-spacing: -5px;
-            text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            letter-spacing: -6px;
+            filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.9));
         }
 
         .hero-scroll-tag {
             position: absolute;
-            bottom: 30px;
+            bottom: 35px;
             z-index: 3;
             font-family: 'Courier Prime', monospace;
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--gray);
+            color: var(--silver);
+            background: rgba(0,0,0,0.5);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
         }
 
-        /* HEADER DE ARCHIVO */
+        /* MAISONS FLOTANTES (MOODBOARD STYLE) */
+        .archive-section {
+            padding: 100px 40px 140px;
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+        }
+
         .archive-intro-bar {
-            padding: 60px 40px 20px;
+            margin-bottom: 70px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            padding-bottom: 20px;
         }
         .archive-intro-bar h2 {
-            font-size: clamp(1.8rem, 5vw, 3.5rem);
-            font-weight: 900;
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 6vw, 4.5rem);
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
+            color: var(--white);
         }
         .archive-intro-bar span {
             font-family: 'Courier Prime', monospace;
             font-size: 0.75rem;
-            color: var(--gray);
-            letter-spacing: 1.5px;
+            color: var(--silver);
+            letter-spacing: 2px;
         }
 
-        /* CUADRICULA CON HOVER DE IMÁGENES */
-        .article-grid {
+        .article-floating-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1px;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 0;
-            margin-bottom: 80px;
+            gap: 40px;
+            align-items: start;
         }
 
+        /* Cada tarjeta flota con su propia ligera inclinación orgánica */
         .article-card {
             position: relative;
-            background: #000;
-            aspect-ratio: 1 / 1;
+            background: #14161b;
+            aspect-ratio: 4 / 5;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding: 35px;
             text-decoration: none;
             overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s, border-color 0.4s;
+        }
+
+        .article-card:nth-child(1) { transform: translateY(0px) rotate(-0.5deg); }
+        .article-card:nth-child(2) { transform: translateY(30px) rotate(0.8deg); }
+        .article-card:nth-child(3) { transform: translateY(-10px) rotate(-0.7deg); }
+
+        .article-card:hover {
+            transform: translateY(-12px) scale(1.02) !important;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.85), 0 0 25px rgba(255,255,255,0.06);
+            border-color: rgba(255, 255, 255, 0.35);
         }
 
         .card-bg-image {
@@ -277,11 +311,17 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            opacity: 0;
-            filter: grayscale(100%) contrast(1.2);
-            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-            transform: scale(1.08);
+            opacity: 0.25;
+            filter: contrast(1.15) grayscale(40%);
+            transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s;
+            transform: scale(1.05);
             z-index: 1;
+        }
+
+        .article-card:hover .card-bg-image {
+            opacity: 0.85;
+            filter: contrast(1.1) grayscale(0%);
+            transform: scale(1);
         }
 
         .card-scrim {
@@ -290,7 +330,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
+            background: linear-gradient(180deg, rgba(13,14,17,0.1) 0%, rgba(13,14,17,0.85) 100%);
             z-index: 2;
         }
 
@@ -301,18 +341,19 @@
             flex-direction: column;
         }
 
-        .card-content span {
+        .card-tag {
             font-family: 'Courier Prime', monospace;
             font-size: 0.75rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--gray);
+            color: var(--silver);
             margin-bottom: 8px;
-            transition: color 0.3s;
+            display: inline-block;
         }
 
-        .card-content h3 {
-            font-size: clamp(2rem, 4vw, 3rem);
+        .card-title {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -1.5px;
@@ -320,124 +361,124 @@
             line-height: 0.95;
         }
 
-        .article-card:hover .card-bg-image {
-            opacity: 0.65;
-            transform: scale(1);
-        }
-
-        .article-card:hover .card-content span {
-            color: var(--white);
-        }
-
-        /* SECCIÓN ABOUT CON RECORTE DE PERIÓDICO FLOTANTE */
-        .section-about {
-            min-height: 80vh;
-            padding: 100px 30px;
+        /* CINTA AMERICANA FLOTANTE INTERACTIVA (SOLO SOY UNA CHICA DEL NORTE) */
+        .manifesto-floating-wrapper {
+            padding: 80px 20px 140px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            background: #080808;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .newspaper-clipping {
-            position: relative;
-            background-color: var(--paper);
-            color: var(--ink);
-            max-width: 620px;
-            padding: 50px 45px 40px 45px;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 10px 10px 0px rgba(255, 255, 255, 0.05);
-            transform: rotate(-2deg);
-            animation: newspaperFloat 6s ease-in-out infinite alternate;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-        }
-
-        /* CINTA ADHESIVA / CELO */
-        .tape {
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%) rotate(1.5deg);
-            width: 140px;
-            height: 32px;
-            background-color: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(2px);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-            border-left: 2px dashed rgba(0,0,0,0.15);
-            border-right: 2px dashed rgba(0,0,0,0.15);
-        }
-
-        .clipping-header {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--ink);
-            padding-bottom: 8px;
-            margin-bottom: 25px;
-            font-family: 'Courier Prime', monospace;
-            font-size: 0.68rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
+            position: relative;
+            perspective: 1000px;
         }
 
-        .clipping-body {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.4rem, 3.2vw, 2.1rem);
-            font-weight: 700;
-            line-height: 1.25;
-            text-align: justify;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
+        /* La cinta parece pegada en diagonal y se balancea dinámicamente */
+        .duct-tape-strip {
+            position: relative;
+            background: #e8e6df;
+            color: #0d0e11;
+            padding: 24px 38px;
+            max-width: 820px;
+            width: 90%;
+            transform: rotate(-2.5deg);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), -5px 10px 20px rgba(0,0,0,0.4);
+            border-top: 1px solid #fcfbf8;
+            border-bottom: 2px solid #b5b2aa;
+            transition: transform 0.4s ease;
+            cursor: default;
         }
 
-        .clipping-footer {
-            border-top: 1px solid rgba(0,0,0,0.3);
-            padding-top: 10px;
-            display: flex;
-            justify-content: space-between;
+        .duct-tape-strip:hover {
+            transform: rotate(-1deg) scale(1.02);
+        }
+
+        /* Extremos dentados / rotos de cinta americana */
+        .duct-tape-strip::before, .duct-tape-strip::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 14px;
+            height: 100%;
+            background-color: var(--bg-noise);
+        }
+        .duct-tape-strip::before {
+            left: -7px;
+            clip-path: polygon(100% 0, 0 10%, 100% 20%, 0 30%, 100% 40%, 0 50%, 100% 60%, 0 70%, 100% 80%, 0 90%, 100% 100%);
+        }
+        .duct-tape-strip::after {
+            right: -7px;
+            clip-path: polygon(0 0, 100% 10%, 0 20%, 100% 30%, 0 40%, 100% 50%, 0 60%, 100% 70%, 0 80%, 100% 90%, 0 100%);
+        }
+
+        .tape-label {
+            display: inline-block;
             font-family: 'Courier Prime', monospace;
             font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            opacity: 0.75;
+            background: #0d0e11;
+            color: #ffffff;
+            padding: 3px 8px;
+            margin-bottom: 12px;
         }
 
-        @keyframes newspaperFloat {
-            0% { transform: translateY(0px) rotate(-2deg); }
-            100% { transform: translateY(-12px) rotate(-1.2deg); }
+        .tape-text {
+            font-family: 'Courier Prime', monospace;
+            font-size: clamp(1.15rem, 2.5vw, 1.7rem);
+            font-weight: 700;
+            line-height: 1.35;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
         }
 
-        /* PIE DE PÁGINA */
+        /* FOOTER */
         footer {
-            padding: 80px 40px 50px 40px;
-            background: #000;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 90px 45px 50px;
+            background: #08090b;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
         .footer-main-phrase {
-            font-size: clamp(2.2rem, 8vw, 6rem);
-            font-weight: 900;
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 9vw, 7.5rem);
+            font-weight: 800;
             text-transform: uppercase;
             line-height: 0.85;
-            letter-spacing: -2px;
-            margin-bottom: 20px;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+            background: linear-gradient(180deg, #ffffff 0%, #6e7178 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .footer-desc {
             font-family: 'Courier Prime', monospace;
             color: var(--gray);
-            font-size: 0.8rem;
-            max-width: 550px;
-            margin-bottom: 50px;
-            line-height: 1.5;
+            font-size: 0.85rem;
+            max-width: 580px;
+            margin-bottom: 60px;
+            line-height: 1.6;
         }
         .footer-credits {
+            font-family: 'Courier Prime', monospace;
             font-size: 0.7rem;
-            font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--gray);
             display: flex;
             justify-content: space-between;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .archive-section { padding: 80px 20px; }
+            .article-card:nth-child(1),
+            .article-card:nth-child(2),
+            .article-card:nth-child(3) {
+                transform: none;
+            }
+            .duct-tape-strip { width: 95%; padding: 20px 24px; }
+            footer { padding: 60px 20px 30px; }
         }
     </style>
 </head>
@@ -472,7 +513,7 @@
 
     <!-- PANEL LATERAL -->
     <div class="side-menu" id="sideMenu">
-        <span class="menu-tag">// INDICE DE CONTENIDOS</span>
+        <span class="menu-tag">// ÍNDICE DE CONTENIDOS</span>
         <a class="menu-link">Leyendas de la moda</a>
         
         <div class="menu-link" onclick="toggleMaisons()">Maisons ▾</div>
@@ -506,60 +547,53 @@
         <span class="hero-scroll-tag">[ SCROLL DOWN TO ENTER ARCHIVE ]</span>
     </section>
 
-    <!-- BARRA TITULAR DEL ARCHIVO -->
-    <div class="archive-intro-bar">
-        <h2>Maisons</h2>
-        <span>VOL. 01 — ARCHIVE FILES</span>
-    </div>
+    <!-- SECCIÓN MAISONS FLOTANTES -->
+    <section class="archive-section">
+        <div class="archive-intro-bar">
+            <h2>Maisons</h2>
+            <span>VOL. 01 — ARCHIVE FILES</span>
+        </div>
 
-    <!-- CUADRICULA CON HOVER REVELADOR -->
-    <section class="article-grid">
-        <!-- 01 CHANEL -->
-        <a href="chanel-article.html" class="article-card">
-            <div class="card-bg-image" style="background-image: url('CUADROCHANEL.JPG');"></div>
-            <div class="card-scrim"></div>
-            <div class="card-content">
-                <span>Maison / 01</span>
-                <h3>Chanel</h3>
-            </div>
-        </a>
+        <div class="article-floating-grid">
+            <!-- 01 CHANEL -->
+            <a href="chanel-article.html" class="article-card">
+                <div class="card-bg-image" style="background-image: url('CUADROCHANEL.JPG');"></div>
+                <div class="card-scrim"></div>
+                <div class="card-content">
+                    <span class="card-tag">// ARCHIVE 01</span>
+                    <h3 class="card-title">Chanel</h3>
+                </div>
+            </a>
 
-        <!-- 02 BALENCIAGA -->
-        <a href="balenciaga-article.html" class="article-card">
-            <div class="card-bg-image" style="background-image: url('CUADROBALENCIAGA.JPG');"></div>
-            <div class="card-scrim"></div>
-            <div class="card-content">
-                <span>Maison / 02</span>
-                <h3>Balenciaga</h3>
-            </div>
-        </a>
+            <!-- 02 BALENCIAGA -->
+            <a href="balenciaga-article.html" class="article-card">
+                <div class="card-bg-image" style="background-image: url('CUADROBALENCIAGA.JPG');"></div>
+                <div class="card-scrim"></div>
+                <div class="card-content">
+                    <span class="card-tag">// ARCHIVE 02</span>
+                    <h3 class="card-title">Balenciaga</h3>
+                </div>
+            </a>
 
-        <!-- 03 MARGIELA -->
-        <a href="margiela-article.html" class="article-card">
-            <div class="card-bg-image" style="background-image: url('CUADROMARGIELA.JPG');"></div>
-            <div class="card-scrim"></div>
-            <div class="card-content">
-                <span>Maison / 03</span>
-                <h3>Margiela</h3>
-            </div>
-        </a>
+            <!-- 03 MARGIELA -->
+            <a href="margiela-article.html" class="article-card">
+                <div class="card-bg-image" style="background-image: url('CUADROMARGIELA.JPG');"></div>
+                <div class="card-scrim"></div>
+                <div class="card-content">
+                    <span class="card-tag">// ARCHIVE 03</span>
+                    <h3 class="card-title">Margiela</h3>
+                </div>
+            </a>
+        </div>
     </section>
 
-    <!-- RECORTE DE PERIÓDICO FLOTANTE (ABOUT ME) -->
-    <section id="about" class="section-about">
-        <div class="newspaper-clipping">
-            <div class="tape"></div>
-            <div class="clipping-header">
-                <span>GAZETTE ARCHIVE // NOTE 01</span>
-                <span>ISSUE SPEC.</span>
-            </div>
-            <div class="clipping-body">
+    <!-- CINTA AMERICANA FLOTANTE (ABOUT ME) -->
+    <section id="about" class="manifesto-floating-wrapper">
+        <div class="duct-tape-strip">
+            <span class="tape-label">EVIDENCE // TAPE 01</span>
+            <p class="tape-text">
                 “Solo soy una chica del norte en sus diecinueve que no encontraba tanta información como desearía, así que decidí crearla yo misma.”
-            </div>
-            <div class="clipping-footer">
-                <span>FOUNDER / CURATOR</span>
-                <span>YŪGEN ARCHIVE</span>
-            </div>
+            </p>
         </div>
     </section>
 
@@ -600,4 +634,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
